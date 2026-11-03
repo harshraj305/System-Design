@@ -1,10 +1,10 @@
-package com.design.pattern.strategy.without.disease;
+package com.design.pattern.strategy.with.disease;
+
+import com.design.pattern.strategy.with.treatment.Basic;
 
 public class BodyPain extends Disease {
 
-
-//    @Override
-    public void treatmentType() {
-        System.out.println("Treatment type for body pain is: Physiotherapy");
+    public BodyPain () {
+        super(new Basic());
     }
 }

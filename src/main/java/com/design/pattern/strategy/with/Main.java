@@ -1,22 +1,25 @@
-package com.design.pattern.strategy.without;
+package com.design.pattern.strategy.with;
 
-import com.design.pattern.strategy.without.disease.BodyPain;
-import com.design.pattern.strategy.without.disease.Fracture;
-import com.design.pattern.strategy.without.disease.JointPain;
+import com.design.pattern.strategy.with.disease.BodyPain;
+import com.design.pattern.strategy.with.disease.Disease;
+import com.design.pattern.strategy.with.disease.Fracture;
+import com.design.pattern.strategy.with.disease.JointPain;
+import com.design.pattern.strategy.with.treatment.Basic;
+import com.design.pattern.strategy.with.treatment.TreatmentStrategy;
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("************************");
 
-        BodyPain bodyPain = new BodyPain();
-        bodyPain.treatmentType();
+        Disease bodyPain = new BodyPain();
+        bodyPain.treat();
 
-        JointPain jointPain = new JointPain();
-        jointPain.treatmentType();
+        Disease jointPain = new JointPain();
+        jointPain.treat();
 
-        Fracture fracture = new Fracture();
-        fracture.treatmentType();
+        Disease fracture = new Fracture();
+        fracture.treat();
 
     }
 }

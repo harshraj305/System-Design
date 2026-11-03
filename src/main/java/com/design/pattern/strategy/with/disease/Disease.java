@@ -1,4 +1,6 @@
-package com.design.pattern.strategy.without.disease;
+package com.design.pattern.strategy.with.disease;
+
+import com.design.pattern.strategy.with.treatment.TreatmentStrategy;
 
 public class Disease {
 
@@ -6,7 +8,14 @@ public class Disease {
     private String name;
     private String type;
 
-    public void treatmentType() {
-        System.out.println("Treatment type for disease is: General Treatment");
+    TreatmentStrategy treatmentStrategy;
+
+    Disease(TreatmentStrategy treatmentStrategy) {
+        this.treatmentStrategy = treatmentStrategy;
     }
+
+    public void treat() {
+        treatmentStrategy.treat();
+    }
+
 }

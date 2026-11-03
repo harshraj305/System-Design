@@ -1,9 +1,12 @@
-package com.design.pattern.strategy.without.disease;
+package com.design.pattern.strategy.with.disease;
+
+import com.design.pattern.strategy.with.treatment.Basic;
+import com.design.pattern.strategy.with.treatment.TreatmentStrategy;
 
 public class JointPain extends Disease {
 
 
-    public void treatmentType() {
-        System.out.println("Treatment type for body pain is: Physiotherapy");
+    public JointPain() {
+        super(new Basic());
     }
 }
